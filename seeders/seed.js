@@ -1,40 +1,41 @@
 
 require("dotenv").config({ path: "./config.env" });
 
-const connectDB = require("../config/db.js");
-const db = require('../models');
+const connectDB = require("../config/MongoDB.js");
+const Transaction = require("../models/transaction.js");
 
 connectDB();
 
-const transaction =  [
+const transaction = [
   {
     name: "Dinning",
-    value: "100",
-    day: new Date(new Date().setDate(new Date().getDate() - 1)),
+    value: 300,
+    date: new Date(new Date().setDate(new Date().getDate() - 1)),
   },
   {
     name: "Shopping",
-    value: "200",
-    day: new Date(new Date().setDate(new Date().getDate() - 2)),
+    value: 150,
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
   },
   {
     name: "Movie",
-    value: "200",
-    day: new Date(new Date().setDate(new Date().getDate() - 2)),
+    value: 5,
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
   },
   {
-    name: "Football Ticket",
-    value: "200",
-    day: new Date(new Date().setDate(new Date().getDate() - 1)),
+    name: "Football",
+    value: 200,
+    date: new Date(new Date().setDate(new Date().getDate() - 1)),
   },
   {
     name: "Coffee",
-    value: "10",
-    day: new Date(new Date().setDate(new Date().getDate() - 1)),
+    value: 10,
+    date: new Date(new Date().setDate(new Date().getDate() - 1)),
   },
 ];
 
-db.Transaction.collection.insertMany(transaction)
+console.log(transaction)
+Transaction.insertMany(transaction)
   .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
