@@ -1,10 +1,9 @@
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
-  "/style.css",
+  "/styles.css",
   "/index.js",
-  "/config/IndexedDB.js",
-  "/config/Mongodb.js",
+  "/IndexedDB.js",
   "/manifest.webmanifest",
   'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
 	'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',

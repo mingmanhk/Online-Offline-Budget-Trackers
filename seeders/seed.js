@@ -37,7 +37,7 @@ const transaction = [
 console.log(transaction)
 Transaction.insertMany(transaction)
   .then((data) => {
-    console.log(data.result.n + " records inserted!");
+    console.log(data.length + " records inserted!");
     process.exit(0);
   })
   .catch((err) => {
