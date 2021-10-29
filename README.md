@@ -7,7 +7,7 @@ Repository:
     https://github.com/mingmanhk/Online-Offline-Budget-Trackers
 
 Deployment:
-    https://online-offline-budgettrackers.herokuapp.com/
+    https://onoff-budget-tracker-01.herokuapp.com/
      
 Demo
     <img src="./src/demo.gif"/>
