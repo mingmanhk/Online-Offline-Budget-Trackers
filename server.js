@@ -22,6 +22,6 @@ connectDB();
 // routes
 app.use(require("./routes/api.js"));
 
-app.listen(process.env.PORT || PORT () => {
+app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
